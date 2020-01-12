@@ -1,11 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.renyonggang</groupId>
-  <artifactId>cms-renyonggang.com</artifactId>
+  <groupId>com.zhanggm.cms</groupId>
+  <artifactId>zhanggm-cms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
-  <properties>
+  <name>zhanggm-cms</name>
+  <description>zhanggm-cms</description>
+	<!-- 定义主要版本号 -->
+	<properties>
 		<spring.version>5.1.5.RELEASE</spring.version>
 		<mybatis.version>3.4.2</mybatis.version>
 		<log4j.version>1.2.17</log4j.version>
@@ -37,6 +39,11 @@
 	</properties>
 	<!-- jar依赖 -->
 	<dependencies>
+		<dependency>
+			  <groupId>com.zhanggm.common</groupId>
+			  <artifactId>zhanggm-common-utils</artifactId>
+			  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- 验证框架 -->
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -252,6 +259,7 @@
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -278,7 +286,6 @@
 						<jettyWebAppContext>
 							<!-- 虚拟路径 -->
 							<contextPath>/pic/</contextPath>
-
 							<!-- 物理路径 -->
 							<resourceBase>D:/pic/</resourceBase>
 						</jettyWebAppContext>
@@ -292,6 +299,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
+					<update>true</update>
 					<!-- 项目端口号 -->
 					<port>80</port>
 					<!-- 项目的访问路径 -->
@@ -299,8 +307,11 @@
 					<!-- get请求中文乱码 -->
 					<uriEncoding>utf-8</uriEncoding>
 					<contextReloadable>true</contextReloadable>
+					<useTestClasspath>true</useTestClasspath>
 					<staticContextPath>/pic/</staticContextPath>
 					<staticContextDocbase>D:/pic/</staticContextDocbase>
+					<!-- <staticContextPath>/img/</staticContextPath>
+					<staticContextDocbase>D:/pic/</staticContextDocbase> -->
 				</configuration>
 			</plugin>
 		</plugins>

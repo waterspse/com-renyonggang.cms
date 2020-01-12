@@ -1,8 +1,7 @@
-package com.ryg.dao;
+package com.zhanggm.cms.dao;
 
-public class TagDao {
-	
-	
-	
+import com.zhanggm.cms.pojo.Tag;
+
+public interface TagDao extends BaseDao<Tag>{
 
 }

@@ -1,5 +1,7 @@
-package com.ryg.dao;
+package com.zhanggm.cms.dao;
 
-public interface ChannelDao {
+import com.zhanggm.cms.pojo.Channel;
+
+public interface ChannelDao extends BaseDao<Channel>{
 
 }

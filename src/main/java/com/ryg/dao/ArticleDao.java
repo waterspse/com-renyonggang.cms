@@ -1,5 +1,7 @@
-package com.ryg.dao;
+package com.zhanggm.cms.dao;
 
-public interface ArticleDao {
+import com.zhanggm.cms.pojo.Article;
 
+public interface ArticleDao extends BaseDao<Article>{
+	
 }

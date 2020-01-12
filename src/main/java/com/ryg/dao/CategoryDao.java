@@ -1,5 +1,7 @@
-package com.ryg.dao;
+package com.zhanggm.cms.dao;
 
-public interface CategoryDao {
+import com.zhanggm.cms.pojo.Category;
+
+public interface CategoryDao extends BaseDao<Category>{
 
 }

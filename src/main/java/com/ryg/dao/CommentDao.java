@@ -1,5 +1,7 @@
-package com.ryg.dao;
+package com.zhanggm.cms.dao;
 
-public interface CommentDao {
+import com.zhanggm.cms.pojo.Comment;
+
+public interface CommentDao extends BaseDao<Comment>{
 
 }
